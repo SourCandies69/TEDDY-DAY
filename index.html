@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>भालू-दिवस</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('inbg.jpg'); /* Add background image */
+            background-size: 720px 1280px;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .message {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d30082;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 2px rgb(211, 138, 243);
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #00bfff;
+            color: #fff;
+            border: none;
+            border-radius: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message">
+            भालू दिवस की हार्दिक शुभकामनाएं<br>भालू दिवस के इस उपलक्ष में <br>हम आपके लिए लाए है....?
+        </div>
+        <button onclick="redirectToTeddy()">देखिए 👀</button>
+    </div>
+
+    <script>
+        function redirectToTeddy() {
+            window.location.href = 'teddy.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huh?</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Gaegu:wght@700&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-image: url("teddybg.jpg");
+            background-repeat: no-repeat;
+            background-size: 720px 1280px;
+            text-align: center;
+        }
+
+        .message {
+            color: rgb(225, 4, 114);
+            text-shadow: 2px 2px 2px rgb(119, 119, 119);
+            font-size: 24px; /* Adjust font size for better readability on mobile screens */
+            font-family: 'Gaegu';
+            font-weight: bold;
+            margin-top: 20vh; /* Adjust margin-top for better positioning on mobile screens */
+        }
+
+        #gif {
+            margin-top: 10px; /* Adjust margin-top for better spacing on mobile screens */
+        }
+
+        #button-container {
+            margin-top: 10px; /* Adjust margin-top for better spacing on mobile screens */
+        }
+
+        #take {
+            padding: 10px 20px;
+            color: white;
+            background-color: rgb(255, 254, 255);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 2px 2px 2px rgb(40, 40, 40);
+        }
+
+        #take img {
+            width: 30px; /* Adjust image size for better display on mobile screens */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        h3 {
+            color: blue;
+            font-size: 18px; /* Adjust font size for better readability on mobile screens */
+            font-family: 'Gaegu';
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        Huh? So you were successful to catch me...
+    </div>
+    <div id="gif">
+        <img src="huh.gif" alt="gif" width="150"> <!-- Adjust image width for better display on mobile screens -->
+    </div>
+    <div id="button-container">
+        <h3>Here's your Gift 👇</h3><br>
+        <a id="take" download="gift.jpg" href="gift.jpg">
+            <img src="teddy.png">
+        </a>
+    </div>
+
+    <script>
+        // Add event listener to the button
+        document.getElementById('take').addEventListener('click', function() {
+            // Remove the event listener to prevent multiple downloads
+            this.removeEventListener('click', arguments.callee);
+        });
+    </script>
+</body>
+</html>
