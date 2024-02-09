@@ -21,11 +21,8 @@
             position: absolute;
             display: none;
             cursor: pointer;
-            width: 100px;
-            height: auto;
-        }
-        .teddy{
-            margin-top: 10vh;
+            width: 100px; /* Adjust teddy width as needed */
+            height: auto; /* Maintain aspect ratio */
         }
         .message{
             font-family: 'Bungee Spice';
@@ -37,7 +34,7 @@
 </head>
 <body>
     <div class="message">
-        TRY   TO   CATCH   ME!!
+        TRY TO CATCH ME!!
     </div>
     <a href="chat.html">
         <img id="teddy" src="teddy.png" alt="Teddy Bear">
@@ -46,8 +43,8 @@
     <script>
         const teddy = document.getElementById('teddy');
         const message = document.querySelector('.message');
-        const screenWidth = window.innerWidth;
-        const screenHeight = window.innerHeight - message.clientHeight; 
+        const screenWidth = 720; // Adjusted for 720px width
+        const screenHeight = 1280 - message.clientHeight; // Adjusted for 1280px height
 
         function getRandomPosition() {
             const randomX = Math.floor(Math.random() * (screenWidth - teddy.width));
